@@ -4,7 +4,7 @@ var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [
 var lat = 0;	//set initial lalue
 var lng = 0;	//set initial lalue
 var zoom = 5;	//set zoom level
-var picForBind = 'https://github.com/axiotidis/map/blob/master/img/pic.jpg';
+
 var popup = L.popup();
 
 if (navigator.geolocation) {
@@ -15,10 +15,10 @@ function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
-  //var poptxt = "You are here Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
+  //var poptxt = "<b>You are here</b><br> Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
   
    
-  marker.bindPopup("<img src=\"img/pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
+  marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
   	   
   map.setView([lat, lng], zoom);		
 }
