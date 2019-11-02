@@ -3,7 +3,7 @@ var map = new L.Map('map', {center: center, zoom: 15, maxZoom: maxZoom, layers: 
 
 var lat = 0;	//set initial lalue
 var lng = 0;	//set initial lalue
-
+var zoom=15;	//set zoom level
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(setPosition);
