@@ -1,7 +1,7 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
-var lat = 41.11917;
-var lng = 25.40535;
+var lat = 41.11917;	//set initial lalue
+var lng = 25.40535;	//set initial lalue
 
 
 if (navigator.geolocation) {
@@ -22,16 +22,16 @@ var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [
 
 
 
-/*var popup = L.popup();
+var popup = L.popup();
 
 function onMapClick(e) {
 	popup
-		.setLatLng(e.latlng)
-		.setContent("You clicked the map at " + e.latlng.toString())
+		//.setLatLng(e.latlng)
+		.setContent("You are at " + lat.toString()+" ,"+lng.toString())
 		.openOn(map);
 }
 
-map.on('click', onMapClick);*/
+map.on('click', onMapClick);
 
 /*function onLocationFound(e) {
         var radius = e.accuracy / 2;
@@ -51,14 +51,14 @@ map.on('click', onMapClick);*/
 
     map.locate({setView: true, maxZoom: 16});*/
 
-
+/*set a marker on clicked point
 function onMapClick(e) {
 	var marker = new L.marker(e.latlng).addTo(map)
 		
 }
-map.on('click', onMapClick);
+map.on('click', onMapClick);*/
 
-//var marker = new L.marker([51.5, -0.09]).addTo(map);					//put a marker in a fixed position
+//var marker = new L.marker([51.5, -0.09]).addTo(map);	//put a marker in a fixed position
 
 //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>Hello world!</b><br>I am a popup.<br>");
 //marker.bindPopup("<b>Hello world!</b><br>I am a popup.<br>").openPopup();	//bind a popup with a marker
