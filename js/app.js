@@ -14,10 +14,15 @@ if (navigator.geolocation) {
 function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
-  var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
-  var poptxt = "You are here Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
-  //marker.bindPopup("<img src=\"pic.jpg\"/>"You are here);
-  marker.bindPopup( "<img src=" + https://github.com/axiotidis/map/blob/master/img/pic.jpg + "/> You are here Latitude  = " + lat + " Longitude  = " + lng);
+  //var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
+  //var poptxt = "You are here Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
+  content <- paste(sep = "<br/>",
+               paste0("<img src='https://github.com/axiotidis/map/blob/master/img/pic.jpg", "' />"),
+               paste0("<b>You are here</b>"),
+               paste0("<b>Latitude  = </b>", lat.String()),
+               paste0("<b>Longitude  = </b>", lng.String())
+
+addMarkers(lat, lng, popup=content)
 	   
   //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
   	   
