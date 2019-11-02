@@ -22,7 +22,7 @@ function setPosition(position) {
                paste0("<b>Latitude  = </b>", lat.String()),
                paste0("<b>Longitude  = </b>", lng.String()),
 
-addMarkers(lat, lng, popup=content);
+addMarkers(lat, lng, popup=content)
 	   
   //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
   	   
