@@ -26,7 +26,7 @@ var popup = L.popup();
 
 function onMapClick(e) {
 	popup
-		//.setLatLng(e.latlng)
+		.setLatLng(e.latlng)
 		.setContent("You are at " + lat.toString()+" ,"+lng.toString())
 		.openOn(map);
 }
