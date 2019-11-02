@@ -17,8 +17,8 @@ function setPosition(position) {
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
   //var poptxt = "You are here Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
   
-  marker.bindPopup("<img src='" + picForBind + "'/>");   
-  //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
+   
+  marker.bindPopup("<img src=\"img/pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
   	   
   map.setView([lat, lng], zoom);		
 }
