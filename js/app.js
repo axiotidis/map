@@ -15,7 +15,8 @@ function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
-  marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>"You are here"</b><br>"Latitude  = "+lat<br><br>"Longitude = "+lng<br>");
+  marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>You are here</b><br>"Latitude  = "+lat<br>"Longitude = "+lng<br>").openPopup();
+  
   map.setView([lat, lng], zoom);		
 }
 
