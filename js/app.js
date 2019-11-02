@@ -9,8 +9,8 @@ if (navigator.geolocation) {
   }
   
 function setPosition(position) {
-  lat = position.coords.latitude;
-  lng = position.coords.longitude;
+  lat = position.coords.latitude.toString();
+  lng = position.coords.longitude.toString();
   
 }
 
