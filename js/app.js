@@ -1,4 +1,5 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var map = new L.Map('map', {center: center, zoom: 15, maxZoom: maxZoom, layers: [basemap]});
 
 var lat = 0;	//set initial lalue
 var lng = 0;	//set initial lalue
@@ -12,6 +13,7 @@ function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
+  map.flyTo([lat, lng], zoom);		
 }
 
 
@@ -19,7 +21,7 @@ var center = new L.LatLng(lat, lng);
 
 
 //var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [basemap]});	//original
-var map = new L.Map('map', {center: center, zoom: 15, maxZoom: maxZoom, layers: [basemap]});
+
 
 
 var popup = L.popup();
