@@ -1,9 +1,11 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
-var map = new L.Map('map', {center: center, zoom: 15, maxZoom: maxZoom, layers: [basemap]});
+var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
 
 var lat = 0;	//set initial lalue
 var lng = 0;	//set initial lalue
-var zoom=15;	//set zoom level
+var zoom = 5;	//set zoom level
+
+var popup = L.popup();
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(setPosition);
@@ -13,6 +15,7 @@ function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
+  marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>"You are here"</b><br>"Latitude  = "+lat<br><br>"Longitude = "+lng<br>");
   map.setView([lat, lng], zoom);		
 }
 
@@ -24,7 +27,7 @@ var center = new L.LatLng(lat, lng);
 
 
 
-var popup = L.popup();
+
 
 function onMapClick(e) {
 	popup
