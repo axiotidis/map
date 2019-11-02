@@ -20,9 +20,9 @@ function setPosition(position) {
                paste0("<img src='https://github.com/axiotidis/map/blob/master/img/pic.jpg", "' />"),
                paste0("<b>You are here</b>"),
                paste0("<b>Latitude  = </b>", lat.String()),
-               paste0("<b>Longitude  = </b>", lng.String())
+               paste0("<b>Longitude  = </b>", lng.String());
 
-addMarkers(lat, lng, popup=content)
+addMarkers(lat, lng, popup=content);
 	   
   //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>You are here</b><br>Latitude  =  <br>Longitude  =  ");
   	   
