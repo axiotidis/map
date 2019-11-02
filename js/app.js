@@ -1,7 +1,7 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
-var lat = null;
-var lng = null;
+var lat = 0;
+var lng = 0;
 
 
 if (navigator.geolocation) {
