@@ -9,9 +9,9 @@ if (navigator.geolocation) {
   }
   
 function setPosition(position) {
-  lat = position.coords.latitude.toString();
-  lng = position.coords.longitude.toString();
-  
+  lat = position.coords.latitude.toString();		//find latitude
+  lng = position.coords.longitude.toString();		//find lognitude
+  var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
 }
 
 
