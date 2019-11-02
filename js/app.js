@@ -18,8 +18,8 @@ function setPosition(position) {
 var center = new L.LatLng(lat, lng);
 
 
-var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [basemap]});
-
+//var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [basemap]});	//original
+var map = new L.Map('map', {center: center, zoom: 15, maxZoom: maxZoom, layers: [basemap]});
 
 
 var popup = L.popup();
