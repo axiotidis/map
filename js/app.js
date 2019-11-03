@@ -15,12 +15,23 @@ function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
   var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
-  //var poptxt = "<b>You are here</b><br> Latitude  = "+lat.toString + " Longitude  =  " + lng.toString;
+  var mypopup = "<img src=\"img/pic.jpg\"/>";
+	mypopup += "<br><br><b>You are here</b>";
+	mypopup += "<br><b>Latitude  =  </b>";
+	mypopup += lat;
+	mypopup += "<br><b>Longitude  =  </b>";
+	mypopup += lng;
+   marker.bindPopup(mypopup);
+	
   //marker.bindPopup("<img src=\"img/pic.jpg\"/>");	//ok
-  //marker.bindPopup("<br><br><b>You are here</b><br>");	//ok
-  //marker.bindPopup("<b>Latitude  =  </b>");		//ok
-  marker.bindPopup(lat);
-   //marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br><b>Latitude  =  </b>+"lat.toString()"<br><b>Longitude  =  </b>+"lng.toString()"");
+  //marker.bindPopup("<br><br><b>You are here</b>");	//ok
+  //marker.bindPopup("<br><b>Latitude  =  </b>");		//ok
+  //marker.bindPopup(lat);	//ok
+  //marker.bindPopup("<br><b>Longitude  =  </b>");
+  //marker.bindPopup(lng);
+	
+	
+  //marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br><b>Latitude  =  </b>+"lat.toString()"<br><b>Longitude  =  </b>+"lng.toString()"");
   //marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br><b>Latitude  =  </b><br><b>Longitude  =  </b>");
   	   
   map.setView([lat, lng], zoom);		
