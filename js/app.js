@@ -1,8 +1,8 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
 
-var lat = 0;	//set initial lalue
-var lng = 0;	//set initial lalue
+var lat = 0;	//set initial value
+var lng = 0;	//set initial value
 var zoom = 5;	//set zoom level
 
 var popup = L.popup();
@@ -38,14 +38,32 @@ var center = new L.LatLng(lat, lng);
 
 
 
-function onMapClick(e) {
+/*function onMapClick(e) {
 	popup
 		.setLatLng(e.latlng)
 		.setContent("You are at " + lat.toString()+" ,"+lng.toString())
 		.openOn(map);
 }
 
-map.on('click', onMapClick);
+map.on('click', onMapClick);*/
+
+function onMapClick(e) {
+        var radius = e.accuracy / 2;
+
+        L.marker(e.latlng).addTo(map)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        L.circle(e.latlng, radius).addTo(map);
+    }
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+
+    map.on('click', onMapClick);;
 
 /*function onLocationFound(e) {
         var radius = e.accuracy / 2;
