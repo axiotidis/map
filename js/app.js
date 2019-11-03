@@ -26,7 +26,7 @@ if (navigator.geolocation) {
 function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
-  var marker = new L.marker([lat, lng]).addTo(map);	//set a marker in current geoposition
+  var marker = new L.marker([lat, lng], {icon: greenIcon}).addTo(map);	//set a marker in current geoposition
   var mypopup = "<img src=\"img/pic.jpg\"/>";
 	mypopup += "<br><br><b>You are here</b>";
 	mypopup += "<br><b>Latitude  =  </b>";
