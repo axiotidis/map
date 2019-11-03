@@ -86,8 +86,7 @@ map.on('click', onMapClick);*/
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
-	var index = leafletKnn(layer);
-	index.nearest(point: L.LatLng, 100, radius);
+	
 	
 	
 	
