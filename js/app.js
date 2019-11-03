@@ -86,13 +86,13 @@ map.on('click', onMapClick);*/
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
-	var gj = L.geoJson(GEOJSON_DATA);
-	var nearest = leafletKnn(gj).nearest(L.latLng(lat, lng), 5);
+	var index = leafletKnn(layer);
+	index.nearest(point: [lng, lat], 100, radius);
 	
 	
 	
         L.circle(e.latlng, radius).addTo(map)
-            .bindPopup("There are " + nearest + " in your map").openPopup();
+            .bindPopup("There are " + index + " in your map").openPopup();
 
         
     }
