@@ -6,7 +6,7 @@ var lat = 0;	//set initial value
 var lng = 0;	//set initial value
 var zoom = 5;	//set zoom level
 
-var greenIcon = L.icon({
+var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
 	shadowUrl: 'img/leaf-shadow.png',
 
