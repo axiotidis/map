@@ -82,13 +82,7 @@ map.on('click', onMapClick);*/
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);*/
 
-L.geoJSON(data, {
-    style: function (feature) {
-        return {color: feature.properties.color};
-    }
-}).bindPopup(function (layer) {
-    return layer.feature.properties.description;
-}).addTo(map);
+
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
