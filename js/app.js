@@ -47,7 +47,7 @@ var center = new L.LatLng(lat, lng);
 
 map.on('click', onMapClick);*/
 
-function onMapClick(e) {
+/*function onMapClick(e) {
         var radius = e.accuracy / 2;
 
         L.marker(e.latlng).addTo(map)
@@ -63,9 +63,9 @@ function onMapClick(e) {
     //map.on('locationfound', onLocationFound);
     //map.on('locationerror', onLocationError);
 
-    map.on('click', onMapClick);;
+    map.on('click', onMapClick);;*/
 
-/*function onLocationFound(e) {
+function onLocationFound(e) {
         var radius = e.accuracy / 2;
 
         L.marker(e.latlng).addTo(map)
@@ -81,7 +81,7 @@ function onMapClick(e) {
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 
-    map.locate({setView: true, maxZoom: 16});*/
+    map.locate({setView: true, maxZoom: 16});
 
 /*set a marker on clicked point
 function onMapClick(e) {
