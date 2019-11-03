@@ -84,9 +84,12 @@ map.on('click', onMapClick);*/
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
-
+	
+	var pins = L.geoJson(geojsonFeature, {}).addTo(map);
+	var totalPins = pins.getLayers().length;
+	
         L.circle(e.latlng, radius).addTo(map)
-            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+            .bindPopup("There are " + totalPins + " in your map").openPopup();
 
         
     }
