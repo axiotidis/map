@@ -58,7 +58,7 @@ map.on('click', onMapClick);*/
 
     /*function onLocationError(e) {
         alert(e.message);
-    }*/
+    }
 
     //map.on('locationfound', onLocationFound);
     //map.on('locationerror', onLocationError);
