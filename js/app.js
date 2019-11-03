@@ -82,16 +82,22 @@ map.on('click', onMapClick);*/
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);*/
 
+L.geoJSON(data, {
+    style: function (feature) {
+        return {color: feature.properties.color};
+    }
+}).bindPopup(function (layer) {
+    return layer.feature.properties.description;
+}).addTo(map);
+
 function onLocationFound(e) {
         var radius = 15000;	//15km
 	
 	
-	L.geoJSON(geojsonFeature).addTo(map);
-	var pins = L.geoJson(geojsonFeature, {}).addTo(map);
-	var totalPins = pins.getLayers().length;
+	
 	
         L.circle(e.latlng, radius).addTo(map)
-            .bindPopup("There are " + totalPins + " in your map").openPopup();
+            .bindPopup("There are " + radius + " in your map").openPopup();
 
         
     }
