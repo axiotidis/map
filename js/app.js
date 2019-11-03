@@ -91,7 +91,7 @@ function onLocationFound(e) {
 	
 	
         L.circle(e.latlng, radius).addTo(map)
-            .bindPopup("There are " + index + " in your map").openPopup();
+            .bindPopup("There are " + radius + " in your map").openPopup();
 
         
     }
