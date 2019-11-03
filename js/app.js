@@ -56,12 +56,12 @@ function onMapClick(e) {
         L.circle(e.latlng, radius).addTo(map);
     }
 
-    function onLocationError(e) {
+    /*function onLocationError(e) {
         alert(e.message);
-    }
+    }*/
 
-    map.on('locationfound', onLocationFound);
-    map.on('locationerror', onLocationError);
+    //map.on('locationfound', onLocationFound);
+    //map.on('locationerror', onLocationError);
 
     map.on('click', onMapClick);;
 
