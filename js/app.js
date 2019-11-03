@@ -22,7 +22,8 @@ function setPosition(position) {
 	mypopup += lat;
 	mypopup += "<br><b>Longitude  =  </b>";
 	mypopup += lng;
-   marker.bindPopup(mypopup).openPopup();
+   //marker.bindPopup(mypopup).openPopup();
+   marker.bindPopup(mypopup);
 	
   
   	   
@@ -86,9 +87,10 @@ map.on('click', onMapClick);*/
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
+	var nbrOfMarkers = 0;
 	popup
 		.setLatLng(e.latlng)
-		.setContent("There are " + radius/1000 + "km in your map")
+		.setContent("There are "+ nbrOfMarkers + "in a radius of" + radius/1000 + "km in your map")
 		.openOn(map);
 	
 	
