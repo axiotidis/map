@@ -86,12 +86,15 @@ map.on('click', onMapClick);*/
 
 function onLocationFound(e) {
         var radius = 15000;	//15km
+	popup
+		.setLatLng(e.latlng)
+		.setContent("There are " + radius/1000 + "km in your map")
+		.openOn(map);
 	
 	
 	
-	
-        L.circle(e.latlng, radius).addTo(map)
-            .bindPopup("There are " + radius + " in your map").openPopup();
+        /*L.circle(e.latlng, radius).addTo(map)
+            .bindPopup("There are " + radius + " in your map").openPopup();*/
 
         
     }
