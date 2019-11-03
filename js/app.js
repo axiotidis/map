@@ -82,7 +82,23 @@ map.on('click', onMapClick);*/
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);*/
 
-    map.locate({setView: true, maxZoom: 16});
+function onLocationFound(e) {
+        var radius = 15000;	//15km
+
+        L.circle(e.latlng, radius).addTo(map)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        
+    }
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+
+    map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
 /*set a marker on clicked point
 function onMapClick(e) {
