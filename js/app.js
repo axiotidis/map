@@ -85,7 +85,7 @@ map.on('click', onMapClick);*/
 function onLocationFound(e) {
         var radius = 15000;	//15km
 	
-	var pins = new L.geoJson(geojsonFeature, {}).addTo(map);
+	var pins = new L.geoJson(geojsonFeature, {onEachFeature: onEachFeature}).addTo(map);
 	var totalPins = pins.getLayers().length;
 	
         L.circle(e.latlng, radius).addTo(map)
