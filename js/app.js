@@ -96,7 +96,7 @@ map.on('click', onMapClick);*/
 
 
 
-/*function onLocationFound(e) {
+function onLocationFound(e) {
         var radius = 15000;	//15km
 	var nbrOfMarkers = 0;
 	popup
@@ -106,7 +106,7 @@ map.on('click', onMapClick);*/
 	
 	
 	
-        /*L.circle(e.latlng, radius).addTo(map)
+        L.circle(e.latlng, radius).addTo(map)
             .bindPopup("There are " + radius + " in your map").openPopup();
 
         
@@ -117,7 +117,7 @@ map.on('click', onMapClick);*/
     }
 
     map.on('locationfound', onLocationFound);
-    map.on('locationerror', onLocationError);*/
+    map.on('locationerror', onLocationError);
 
     map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
