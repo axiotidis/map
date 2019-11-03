@@ -90,7 +90,7 @@ function onLocationFound(e) {
 	var nbrOfMarkers = 0;
 	popup
 		.setLatLng(e.latlng)
-		.setContent("There are "+ nbrOfMarkers + "in a radius of" + radius/1000 + "km in your map")
+		.setContent("There are "+ nbrOfMarkers + " markers in a radius of " + radius/1000 + "km in your map")
 		.openOn(map);
 	
 	
