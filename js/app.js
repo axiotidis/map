@@ -1,6 +1,6 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
-//var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
-var map = L.map('map', { dragging: !L.Browser.mobile });
+var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
+
 
 var lat = 0;	//set initial value
 var lng = 0;	//set initial value
