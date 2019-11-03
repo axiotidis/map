@@ -21,18 +21,9 @@ function setPosition(position) {
 	mypopup += lat;
 	mypopup += "<br><b>Longitude  =  </b>";
 	mypopup += lng;
-   marker.bindPopup(mypopup);
+   marker.bindPopup(mypopup).openPopup();
 	
-  //marker.bindPopup("<img src=\"img/pic.jpg\"/>");	//ok
-  //marker.bindPopup("<br><br><b>You are here</b>");	//ok
-  //marker.bindPopup("<br><b>Latitude  =  </b>");		//ok
-  //marker.bindPopup(lat);	//ok
-  //marker.bindPopup("<br><b>Longitude  =  </b>");
-  //marker.bindPopup(lng);
-	
-	
-  //marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br><b>Latitude  =  </b>+"lat.toString()"<br><b>Longitude  =  </b>+"lng.toString()"");
-  //marker.bindPopup("<img src=\"img/pic.jpg\"/><br><br><b>You are here</b><br><b>Latitude  =  </b><br><b>Longitude  =  </b>");
+  
   	   
   map.setView([lat, lng], zoom);		
 }
