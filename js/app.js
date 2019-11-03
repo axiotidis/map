@@ -121,12 +121,12 @@ function onLocationFound(e) {
 
     map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
-/*set a marker on clicked point
+//set a marker on clicked point
 function onMapClick(e) {
-	var marker = new L.marker(e.latlng).addTo(map)
+	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map)
 		
 }
-map.on('click', onMapClick);*/
+map.on('click', onMapClick);
 
 //var marker = new L.marker([51.5, -0.09]).addTo(map);	//put a marker in a fixed position
 
