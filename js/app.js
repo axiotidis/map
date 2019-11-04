@@ -51,8 +51,9 @@ function onLocationFound(e) {
         alert(e.message);
     }
 
-    map.on('locationfound', onLocationFound);
-    map.on('locationerror', onLocationError);
+map.on('locationfound', onLocationFound);
+map.on('locationerror', onLocationError);
+map.on('click', onMapClick);
 
 //set a marker on clicked point
 function onMapClick(e) {
