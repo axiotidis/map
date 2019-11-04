@@ -5,6 +5,7 @@ var lat = 0;		//set initial value latitude
 var lng = 0;		//set initial value lognitude
 var zoom = 15;		//set zoom level
 var myPosition = 0;	//set an initial value of user's location
+var markPosition = 0;	//set an initial value of temporary marker's position
 
 var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
@@ -45,10 +46,7 @@ var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom
 
 function onLocationFound(e) {
         myPosition = e.latlng;
-	popup				//this is a test
-		.setLatLng(e.latlng)
-		.setContent("You are at "+ myPosition + " position")
-		.openOn(map);
+	
     }
 
     function onLocationError(e) {
@@ -61,7 +59,9 @@ map.on('locationerror', onLocationError);
 
 //set a marker on clicked point
 function onMapClick(e) {
-	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map)
+	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
+	markPosition = marker.e.latlng;
+	marker.bindPopup(markPosition).openPopup();
 		
 }
 map.on('click', onMapClick);
