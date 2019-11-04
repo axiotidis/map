@@ -103,14 +103,16 @@ function toRadian(degree) {
 
 var findNearMarkers = function() {
     
-    range = document.getElementById('rangekm').value;
+    var temp = document.getElementById('rangekm').value;
 	if (rangekm) {
         $("#clear").fadeIn();
     } else {
         $("#clear").fadeOut();
     }
-	if (range != NaN){
-		
+	if (temp != NaN){
+		range = temp;
+	}else {
+		window.alert("This is not a number, I use the default range of 10km");
 	}
 
     
