@@ -112,6 +112,12 @@ var findNearMarkers = function() {
 	if (isNaN(temp)){
 		
 		window.alert("This is not a number, I use the default range of 10km");
+		var message = "Neighors in Range";
+		for (j = 0 ; j < indx ; ++j){
+			if (poi[j][1] <= range){
+				message += poi[j][0];
+			}
+		window.alert(message);
 		
 	}else {
 		range = temp;
