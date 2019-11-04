@@ -101,4 +101,19 @@ function toRadian(degree) {
     return degree*Math.PI/180;
 }
 
+var findNearMarkers = function() {
+    
+    range = document.getElementById('filter-string').value;
+	if (range) {
+        $("#clear").fadeIn();
+    } else {
+        $("#clear").fadeOut();
+    }
+	if (range != NaN){
+		
+	}
 
+    
+
+    
+};
