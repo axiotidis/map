@@ -61,7 +61,9 @@ map.on('locationerror', onLocationError);
 function onMapClick(e) {
 	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
 	var markPosition = e.latlng;
-	marker.bindPopup("markPosition = " + markPosition).openPopup();
+	var lat2 = markPosition.lat;
+	var lng2 = markPosition.lng;
+	marker.bindPopup("markPosition = " + lat2 + " - " + lng2).openPopup();
 		
 }
 map.on('click', onMapClick);
