@@ -1,9 +1,10 @@
 
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
-var lat = 0;	//set initial value
-var lng = 0;	//set initial value
-var zoom = 15;	//set zoom level
+var lat = 0;		//set initial value latitude
+var lng = 0;		//set initial value lognitude
+var zoom = 15;		//set zoom level
+var myPosition = 0;	//set an initial value of user's location
 
 var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
@@ -43,7 +44,11 @@ var center = new L.LatLng(lat, lng);
 var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
 
 function onLocationFound(e) {
-        //do nothing	
+        myPosition = e.latlng;
+	popup				//this is a test
+		.setLatLng(e.latlng)
+		.setContent("You are at "+ myPosition + " position")
+		.openOn(map);
     }
 
     function onLocationError(e) {
