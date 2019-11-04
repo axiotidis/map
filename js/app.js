@@ -38,17 +38,15 @@ function setPosition(position) {
   map.setView([lat, lng], zoom);		
 }
 
+//center and zoom map in a position found by geolocation
+var center = new L.LatLng(lat, lng);
 var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
 
 function onLocationFound(e) {
-        //center and zoom map in a position found by geolocation
-	var center = new L.LatLng(lat, lng);
-	
+        //do nothing	
     }
 
     function onLocationError(e) {
-	//center and zoom map in a 0, 0 position
-	var center = new L.LatLng(lat, lng);
         alert(e.message);
     }
 
