@@ -71,7 +71,7 @@ function onMapClick(e) {
 	var lat2 = markPosition.lat;	//this is the marker's latitude
 	var lng2 = markPosition.lng;	//this is the marker's lognitude
 	var distance = getDistance([lat1, lng1], [lat2, lng2]).toFixed(2);
-	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2 + '<br>';
+	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2;
 	poi[indx][0] = poiDetails;
 	poi[indx][1] = distance;
 	++indx;
