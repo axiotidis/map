@@ -38,11 +38,11 @@ function setPosition(position) {
 	
   
   	   
-  map.setView([lat, lng], zoom);		
+  //map.setView([lat, lng], zoom);		
 }
 
 
-//var center = new L.LatLng(lat, lng);
+var center = new L.LatLng(lat, lng);
 
 //map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
