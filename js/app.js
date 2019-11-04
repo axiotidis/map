@@ -111,6 +111,7 @@ var findNearMarkers = function() {
     }
 	if (temp != NaN){
 		range = temp;
+		window.alert("This is  a number");
 	}else {
 		window.alert("This is not a number, I use the default range of 10km");
 	}
