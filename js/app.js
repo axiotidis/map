@@ -117,15 +117,17 @@ var findNearMarkers = function() {
 			if (poi[j][1] <= range){
 				message += poi[j][0];
 			}
+		}
 		window.alert(message);
 		
-	}else {
+	} else {
 		range = temp;
 		var message = "<b>" + "Neighors in Range" + "</b>" + "<br>";
 		for (j = 0 ; j < indx ; ++j){
 			if (poi[j][1] <= range){
 				message += poi[j][0];
 			}
+		}
 		window.alert(message);
 			
 		}
