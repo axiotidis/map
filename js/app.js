@@ -109,14 +109,14 @@ var findNearMarkers = function() {
     } else {
         $("#clear").fadeOut();
     }
-	if (isNaN(temp)){
+	if (isNaN(temp) || null){
 		
 		window.alert("This is not a number, try again");
 		
 		
 	} else {
 		range = temp;
-		var message = "<b>Neighors in Range</b><br>";
+		var message = "Neighors in Range";
 		for (j = 0 ; j < indx ; ++j){
 			if (poi[j][1] <= range){
 				message += poi[j][0];
