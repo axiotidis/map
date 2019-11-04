@@ -1,7 +1,8 @@
+
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 //var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
-//var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
-var map = new L.map('map', {zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+
+
 
 var lat = 0;	//set initial value
 var lng = 0;	//set initial value
@@ -41,9 +42,9 @@ function setPosition(position) {
   	   
   map.setView([lat, lng], zoom);		
 }
+var center = new L.LatLng(lat, lng);
+var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
 
-
-//var center = new L.LatLng(lat, lng);
 
 //map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
