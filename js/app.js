@@ -109,7 +109,7 @@ var findNearMarkers = function() {
     } else {
         $("#clear").fadeOut();
     }
-	if (isNaN(temp) || temp == null){
+	if (isNaN(temp) || temp == "" || temp == " "){
 		
 		window.alert("This is not a number, try again");
 		
