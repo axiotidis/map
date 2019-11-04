@@ -110,14 +110,14 @@ $(document).ready( function() {
     $.ajax ({
         type:'GET',
         typeAheadSource = ArrayToSet(typeAheadSource);
-        $('#filter-string').typeahead({source: typeAheadSource});
+        $('#rangeKm').typeahead({source: typeAheadSource});
         findNearMarkers();
         }
     });
 
     $("#clear").click(function(evt){
         evt.preventDefault();
-        $("#filter-string").val("").focus();
+        $("#rangeKm").val("").focus();
         findNearMarkers();
     });
 
