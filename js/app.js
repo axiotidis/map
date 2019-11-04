@@ -34,16 +34,22 @@ function setPosition(position) {
 	mypopup += "<br><b>Longitude  =  </b>";
 	mypopup += lng;
    marker.bindPopup(mypopup);
-   
-	
-  
   	   
   map.setView([lat, lng], zoom);		
 }
 
-//center and zoom map in a position found by geolocation
-var center = new L.LatLng(lat, lng);
-var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+function onLocationFound(e) {
+        //center and zoom map in a position found by geolocation
+	var center = new L.LatLng(lat, lng);
+	var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+    }
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
 
 //set a marker on clicked point
 function onMapClick(e) {
