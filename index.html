@@ -18,16 +18,13 @@
 <body>
     
     <div id="map"></div>
-    <div id="filter-container">
-        <form class="form-search" class="noSelect" onSubmit="findNearMarkers(); return false;">
-            <a href="#" id="clear" class="leaflet-popup-close-button">&#215;</a>
-            <div class="input-append">
-                <input type="text" id="rangeKm" class="input-medium search-query search-box" autocomplete="off">
-                <button type="submit" class="btn search-box"><i class="icon-search"></i>Find Neighbors in Range</button>
-            </div>
-        </form>
-        <div id="search-results" class="leaflet-control-attribution leaflet-control pull-right"></div>
-    </div>
+    <div>
+        <form id='form'>
+            <input id='range' type='text' name='range'>
+            <button id='find'>Find Neighbors in Range</button>
+            <input type='submit'>
+        </form>       
+    </div>    
    
         <!--<div id="search-results" class="leaflet-control-attribution leaflet-control pull-right"></div>-->
     <!--</div>-->
