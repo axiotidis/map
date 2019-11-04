@@ -1,5 +1,5 @@
 
-var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var basemap = new L.TileLayer(baseUrl, {maxZoom: 34, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 //var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
 
 
