@@ -64,6 +64,7 @@ map.on('locationerror', onLocationError);
 
 //set a marker on clicked point
 function onMapClick(e) {
+	var indx;
 	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
 	var markPosition = e.latlng;
 	var lat1 = lat;	//this is from geolocation
@@ -71,10 +72,10 @@ function onMapClick(e) {
 	var lat2 = markPosition.lat;	//this is the marker's latitude
 	var lng2 = markPosition.lng;	//this is the marker's lognitude
 	var distance = getDistance([lat1, lng1], [lat2, lng2]).toFixed(2);
-	var poiDetails = "Place " + index.toString + " , Latitude = " + lat2 + " , Lognitude = " + lng2 + '<br>';
-	poi[index][0] = poiDetails;
-	poi[index][1] = distance;
-	index += index;
+	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2 + '<br>';
+	poi[indx][0] = poiDetails;
+	poi[indx][1] = distance;
+	indx += indx;
 	
 	//for testing
 	marker.bindPopup(poiDetails + " " + distance + "km").openPopup();
