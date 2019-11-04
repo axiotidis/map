@@ -6,7 +6,7 @@ var lng = 0;		//set initial value lognitude
 var zoom = 15;		//set zoom level
 var myPosition = 0;	//set an initial value of user's location
 var range = 10;		//set default range to 10km
-//var index = 0;		//set the array index
+var indx = 0;		//set the array index
 var poi = [
 	[],
 	[]
@@ -64,7 +64,6 @@ map.on('locationerror', onLocationError);
 
 //set a marker on clicked point
 function onMapClick(e) {
-	var indx = 0;
 	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
 	var markPosition = e.latlng;
 	var lat1 = lat;	//this is from geolocation
@@ -75,7 +74,7 @@ function onMapClick(e) {
 	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2 + '<br>';
 	poi[indx][0] = poiDetails;
 	poi[indx][1] = distance;
-	indx += indx;
+	++indx;
 	
 	//for testing
 	marker.bindPopup(poiDetails + " " + distance + "km").openPopup();
