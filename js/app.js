@@ -38,22 +38,23 @@ function setPosition(position) {
   map.setView([lat, lng], zoom);		
 }
 
+var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+
 function onLocationFound(e) {
         //center and zoom map in a position found by geolocation
 	var center = new L.LatLng(lat, lng);
-	var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+	
     }
 
     function onLocationError(e) {
 	//center and zoom map in a 0, 0 position
 	var center = new L.LatLng(lat, lng);
-	var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
         alert(e.message);
     }
 
 map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
-map.on('click', onMapClick);
+
 
 //set a marker on clicked point
 function onMapClick(e) {
