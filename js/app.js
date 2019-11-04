@@ -4,7 +4,7 @@ var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom
 
 var lat = 0;	//set initial value
 var lng = 0;	//set initial value
-var zoom = 5;	//set zoom level
+var zoom = 10;	//set zoom level
 
 var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
