@@ -103,8 +103,8 @@ function toRadian(degree) {
 
 var findNearMarkers = function() {
     
-    range = document.getElementById('filter-string').value;
-	if (range) {
+    range = document.getElementById('rangekm').value;
+	if (rangekm) {
         $("#clear").fadeIn();
     } else {
         $("#clear").fadeOut();
