@@ -1,12 +1,12 @@
 
-var basemap = new L.TileLayer(baseUrl, {maxZoom: 34, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 //var map = new L.Map('map', {center: center, zoom: 5, maxZoom: maxZoom, layers: [basemap]});
 
 
 
 var lat = 0;	//set initial value
 var lng = 0;	//set initial value
-var zoom = 15;	//set zoom level
+var zoom = 1;	//set zoom level
 
 var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
