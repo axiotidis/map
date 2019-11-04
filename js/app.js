@@ -44,7 +44,14 @@ function setPosition(position) {
 
 var center = new L.LatLng(lat, lng);
 
+//map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
+//set a marker on clicked point
+function onMapClick(e) {
+	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map)
+		
+}
+map.on('click', onMapClick);
 //var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [basemap]});	//original
 
 
@@ -119,24 +126,19 @@ map.on('click', onMapClick);*/
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);*/
 
-    map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
+    
 
-//set a marker on clicked point
-function onMapClick(e) {
-	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map)
-		
-}
-map.on('click', onMapClick);
+
 
 //var marker = new L.marker([51.5, -0.09]).addTo(map);	//put a marker in a fixed position
 
 //marker.bindPopup("<img src=\"pic.jpg\"><br><br><b>Hello world!</b><br>I am a popup.<br>");
 //marker.bindPopup("<b>Hello world!</b><br>I am a popup.<br>").openPopup();	//bind a popup with a marker
 
-var popupOpts = {
+/*var popupOpts = {
     autoPanPadding: new L.Point(5, 50),
     autoPan: true
-};
+};*/
 
 /*var points = L.geoCsv (null, {
     firstLineTitles: true,
