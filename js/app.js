@@ -6,7 +6,7 @@ var lng = 0;		//set initial value lognitude
 var zoom = 15;		//set zoom level
 var myPosition = 0;	//set an initial value of user's location
 var range = 10;		//set default range to 10km
-var index = 0;		//set the array index
+//var index = 0;		//set the array index
 var poi = [
 	[],
 	[]
