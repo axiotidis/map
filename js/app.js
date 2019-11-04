@@ -102,23 +102,3 @@ function toRadian(degree) {
 }
 
 
-var findNearMarkers = function() {
-	
-}
-
-$(document).ready( function() {
-    $.ajax ({
-        type:'GET',
-        typeAheadSource = ArrayToSet(typeAheadSource);
-        $('#rangeKm').typeahead({source: typeAheadSource});
-        findNearMarkers();
-        }
-    });
-
-    $("#clear").click(function(evt){
-        evt.preventDefault();
-        $("#rangeKm").val("").focus();
-        findNearMarkers();
-    });
-
-});
