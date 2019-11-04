@@ -138,7 +138,7 @@ var popupOpts = {
     autoPan: true
 };
 
-var points = L.geoCsv (null, {
+/*var points = L.geoCsv (null, {
     firstLineTitles: true,
     fieldSeparator: fieldSeparator,
     onEachFeature: function (feature, layer) {
@@ -187,7 +187,7 @@ var dataCsv;
 
 var addCsvMarkers = function() {
     hits = 0;
-    total = 0;
+    total = 0;*/
     /*filterString = document.getElementById('filter-string').value;
 
     if (filterString) {
@@ -196,7 +196,7 @@ var addCsvMarkers = function() {
         $("#clear").fadeOut();
     }*/
 
-    map.removeLayer(markers);
+    /*map.removeLayer(markers);
     points.clearLayers();
 
     markers = new L.MarkerClusterGroup(clusterOptions);
@@ -280,4 +280,4 @@ $(document).ready( function() {
         addCsvMarkers();
     });
 
-});
+});*/
