@@ -61,9 +61,32 @@ map.on('locationerror', onLocationError);
 function onMapClick(e) {
 	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
 	var markPosition = e.latlng;
+	var lat1 = lat;	//this is from geolocation
+	var lng1 = lng;	//this is from geolocation
 	var lat2 = markPosition.lat;
 	var lng2 = markPosition.lng;
-	marker.bindPopup("markPosition = " + lat2 + " - " + lng2).openPopup();
+	var distance = getDistance([lat1, lng1], [lat2, lng2]);
+	//for testing
+	marker.bindPopup("distance = " + distance + " m ").openPopup();
 		
 }
 map.on('click', onMapClick);
+
+function getDistance(origin, destination) {
+    // return distance in meters
+    var lon1 = toRadian(origin[1]);
+    var lat1 = toRadian(origin[0]);
+    var lon2 = toRadian(destination[1]);
+    var lat2 = toRadian(destination[0]);
+
+    var deltaLat = lat2 - lat1;
+    var deltaLon = lon2 - lon1;
+
+    var a = Math.pow(Math.sin(deltaLat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon/2), 2);
+    var c = 2 * Math.asin(Math.sqrt(a));
+    var EARTH_RADIUS = 6371;
+    return c * EARTH_RADIUS * 1000;
+}
+function toRadian(degree) {
+    return degree*Math.PI/180;
+}
