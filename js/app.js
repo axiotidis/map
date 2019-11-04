@@ -42,7 +42,7 @@ function setPosition(position) {
 }
 
 
-var center = new L.LatLng(lat, lng);
+//var center = new L.LatLng(lat, lng);
 
 //map.locate({setView: true, maxZoom: 16});	//usefull prosoxi
 
