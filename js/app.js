@@ -45,7 +45,7 @@ var center = new L.LatLng(lat, lng);
 var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
 
 function onLocationFound(e) {
-        myPosition = e.latlng;
+        //do nothing
 	
     }
 
@@ -63,9 +63,10 @@ function onMapClick(e) {
 	var markPosition = e.latlng;
 	var lat1 = lat;	//this is from geolocation
 	var lng1 = lng;	//this is from geolocation
-	var lat2 = markPosition.lat;
-	var lng2 = markPosition.lng;
+	var lat2 = markPosition.lat;	//this is the marker's latitude
+	var lng2 = markPosition.lng;	//this is the marker's lognitude
 	var distance = getDistance([lat1, lng1], [lat2, lng2]);
+	
 	//for testing
 	marker.bindPopup("distance = " + distance.toFixed(2) + " km ").openPopup();
 		
