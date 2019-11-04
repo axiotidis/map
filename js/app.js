@@ -100,3 +100,8 @@ function getDistance(origin, destination) {
 function toRadian(degree) {
     return degree*Math.PI/180;
 }
+
+$('#clickme').click(function()
+{
+$('#result').html('You clicked the button!')
+})
