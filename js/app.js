@@ -114,8 +114,15 @@ var findNearMarkers = function() {
 		window.alert("This is not a number, I use the default range of 10km");
 		
 	}else {
-		window.alert("This is  a number");
 		range = temp;
+		var message = "<b>" + "Neighors in Range" + "</b>" + "<br>";
+		for (j = 0 ; j < indx ; ++j){
+			if (poi[j][1] <= range){
+				message += poi[j][0];
+			}
+		window.alert(message);
+			
+		}
 	}
 
     
