@@ -67,7 +67,7 @@ function onMapClick(e) {
 	var lng2 = markPosition.lng;
 	var distance = getDistance([lat1, lng1], [lat2, lng2]);
 	//for testing
-	marker.bindPopup("distance = " + distance + " km ").openPopup();
+	marker.bindPopup("distance = " + distance.toFixed(2) + " km ").openPopup();
 		
 }
 map.on('click', onMapClick);
