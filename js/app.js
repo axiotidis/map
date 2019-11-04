@@ -64,7 +64,7 @@ map.on('locationerror', onLocationError);
 
 //set a marker on clicked point
 function onMapClick(e) {
-	var indx;
+	var indx = 0;
 	var marker = new L.marker(e.latlng, {icon: greenIcon}).addTo(map);
 	var markPosition = e.latlng;
 	var lat1 = lat;	//this is from geolocation
