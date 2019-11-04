@@ -73,7 +73,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 function getDistance(origin, destination) {
-    // return distance in meters
+    // return distance in km
     var lon1 = toRadian(origin[1]);
     var lat1 = toRadian(origin[0]);
     var lon2 = toRadian(destination[1]);
@@ -85,7 +85,7 @@ function getDistance(origin, destination) {
     var a = Math.pow(Math.sin(deltaLat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon/2), 2);
     var c = 2 * Math.asin(Math.sqrt(a));
     var EARTH_RADIUS = 6371;
-    return c * EARTH_RADIUS * 1000;
+    return c * EARTH_RADIUS;
 }
 function toRadian(degree) {
     return degree*Math.PI/180;
