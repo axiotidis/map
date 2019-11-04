@@ -188,13 +188,13 @@ var dataCsv;
 var addCsvMarkers = function() {
     hits = 0;
     total = 0;
-    filterString = document.getElementById('filter-string').value;
+    /*filterString = document.getElementById('filter-string').value;
 
     if (filterString) {
         $("#clear").fadeIn();
     } else {
         $("#clear").fadeOut();
-    }
+    }*/
 
     map.removeLayer(markers);
     points.clearLayers();
