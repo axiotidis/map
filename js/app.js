@@ -131,9 +131,9 @@ var findNearMarkers = function() {
 		window.alert(message);
 			
 		}
-	}
-
-    
-
-    
 };
+
+    
+
+    
+
