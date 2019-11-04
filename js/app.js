@@ -7,10 +7,7 @@ var zoom = 15;		//set zoom level
 var myPosition = 0;	//set an initial value of user's location
 var range = 10;		//set default range to 10km
 var indx = 0;		//set the array index
-var poi = [
-	[],
-	[]
-	];	//this array holds the marker's details
+var poi = [];		//this array holds the marker's details
 
 var greenIcon = L.icon({			//set a personal marker icon
 	iconUrl: 'img/leaf-green.png',
@@ -71,14 +68,16 @@ function onMapClick(e) {
 	var lat2 = markPosition.lat;	//this is the marker's latitude
 	var lng2 = markPosition.lng;	//this is the marker's lognitude
 	var distance = getDistance([lat1, lng1], [lat2, lng2]).toFixed(2);
-	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2;
-	poi[indx][0] = poiDetails;
-	poi[indx][1] = distance;
-	++indx;
+	var poiDetails = "Place " + indx + " , Latitude = " + lat2 + " , Lognitude = " + lng2 + "<br>";
+	poi.push([poiDetails, distance]);
 	
 	//for testing
-	marker.bindPopup(poiDetails + " " + distance + "km").openPopup();
+	marker.bindPopup(poi[indx][0] + " " + poi[indx][1] + "km").openPopup();
 	//marker.bindPopup("distance = " + distance + " km ").openPopup();
+	
+	++indx;
+	
+	
 		
 }
 map.on('click', onMapClick);
