@@ -122,7 +122,11 @@ var findNearMarkers = function() {
 				message += poi[j][0];
 			}
 		}
-		window.alert(message);
+		//window.alert(message);
+		var popup = L.popup()
+			.setLatLng([lat, lng])
+			.setContent(message)
+			.openOn(map);
 			
 		}
 }
