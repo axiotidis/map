@@ -45,7 +45,8 @@ function setPosition(position) {
 //center and zoom map in a position found by geolocation
 var center = new L.LatLng(lat, lng);
 //var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
-var map = new L.map('map', {center: center, zoomControl: true, maxZoom: maxZoom, layers: [basemap] });
+var map = new L.map('map', {center: center, zoomControl: false, minZoom: 0, maxZoom: 50, layers: [basemap] });
+
 
 function onLocationFound(e) {
         //do nothing
