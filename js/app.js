@@ -116,7 +116,7 @@ var findNearMarkers = function() {
 		
 	} else {
 		range = temp;
-		var message = "<b>" + "Neighors in Range" + "</b>" + "<br>";
+		var message = "<b>" + "Neighors in Range of " + range + "km" + "</b>" + "<br>";
 		for (j = 0 ; j < indx ; ++j){
 			if (poi[j][1] <= range){
 				message += poi[j][0];
