@@ -69,7 +69,7 @@ function onMapClick(e) {
 	var lng2 = markPosition.lng;	//this is the marker's lognitude
 	var tempDistance = getDistance([lat1, lng1], [lat2, lng2]).toFixed(2);
 	var distance = Math.abs(tempDistance);
-	var poiDetails = "<b>" + "* Place " + (indx + 1) + "</b>" + " , Lat = " + lat2 + " , Log = " + lng2 + "<br>";
+	var poiDetails = "<b>" + "* Place " + (indx + 1) + "</b>" + " , Lat = " + lat2 + " , Log = " + lng2;
 	poi.push([poiDetails, distance]);
 	
 	//for testing
@@ -120,7 +120,7 @@ var findNearMarkers = function() {
 		var message = "<b>" + "Neighors in Range of " + range + "km" + "</b>" + "<br>";
 		for (j = 0 ; j < indx ; ++j){
 			if (poi[j][1] <= range){
-				message += poi[j][0] + " " + poi[j][1] + "km";
+				message += poi[j][0] + " " + poi[j][1] + "km" + "<br>";
 			}
 		}
 		//window.alert(message);
