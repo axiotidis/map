@@ -20,6 +20,10 @@ var greenIcon = L.icon({			//set a personal marker icon
 	popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
+//center and zoom map in a position found by geolocation
+var center = new L.LatLng(lat, lng);
+//var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
+var map = new L.map('map', {center: center, zoomControl: false, minZoom: 0, maxZoom: 50, layers: [basemap] });
 var popup = L.popup();
 
 if (navigator.geolocation) {
@@ -37,16 +41,14 @@ function setPosition(position) {
 	mypopup += lat;
 	mypopup += "<br><b>Longitude  =  </b>";
 	mypopup += lng;
-   marker.bindPopup(mypopup).openOn(map);
+   
   
   	   
-  map.setView([lat, lng], zoom);		
+  map.setView([lat, lng], zoom);
+  marker.bindPopup(mypopup).openPopup();
 }
 
-//center and zoom map in a position found by geolocation
-var center = new L.LatLng(lat, lng);
-//var map = new L.map('map', {center: center, zoomControl: false, maxZoom: maxZoom, layers: [basemap] });
-var map = new L.map('map', {center: center, zoomControl: false, minZoom: 0, maxZoom: 50, layers: [basemap] });
+
 
 
 function onLocationFound(e) {
