@@ -37,8 +37,8 @@ function setPosition(position) {
 	mypopup += lat;
 	mypopup += "<br><b>Longitude  =  </b>";
 	mypopup += lng;
-   marker.bindPopup(mypopup);
-   marker.openPopup();
+   marker.bindPopup(mypopup).openOn(map);
+  
   	   
   map.setView([lat, lng], zoom);		
 }
