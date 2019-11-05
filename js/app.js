@@ -73,7 +73,7 @@ function onMapClick(e) {
 	poi.push([poiDetails, distance]);
 	
 	//for testing
-	marker.bindPopup(poi[indx][0] + " - " + poi[indx][1]).openPopup();
+	marker.bindPopup(poi[indx][0] + " [ " + poi[indx][1] +"km" + " ]").openPopup();
 	//marker.bindPopup("distance = " + distance + " km ").openPopup();
 	
 	++indx;
